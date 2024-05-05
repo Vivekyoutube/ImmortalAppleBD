@@ -46,12 +46,13 @@ class Main extends PluginBase implements Listener {
         $player->sendMessage(TextFormat::GREEN . "You have received an Immortal Apple!");
     }
 
-    public function onConsume(PlayerItemConsumeEvent $event): void {
+     public function onConsume(PlayerItemConsumeEvent $event): void {
         $player = $event->getPlayer();
         $item = $event->getItem();
         if ($item->getCustomName() === TextFormat::GOLD . "Immortal Apple") {
             $effect = VanillaEffects::HEALTH_BOOST();
             $player->getEffects()->add(new EffectInstance($effect, 6000, 4, false));
+            $player->setMaxHealth($player->getMaxHealth() + 50); // Add 25 extra hearts
             $player->sendMessage(TextFormat::GREEN . "You feel the power of the Immortal Apple!");
         }
     }
