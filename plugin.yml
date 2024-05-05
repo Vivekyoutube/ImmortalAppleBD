@@ -1,0 +1,13 @@
+name: ImmortalAppleBD
+main: Bobydev\ImmortalAppleBD\Main
+version: 1.0.0
+api: 5.0.0
+author: Bobydev
+commands:
+  bdapple:
+    description: Gives an Immortal Apple.
+    permission: use.bdapple
+permissions:
+  use.bdapple:
+    description: Allows the use of /bdapple command.
+    default: op
