@@ -16,7 +16,7 @@ class Main extends PluginBase implements Listener {
 
     public function onEnable(): void {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        $this->getLogger()->info(TextFormat::GREEN . "ImmortalAppleBD enabled!");
+        $this->getLogger()->info(TextFormat::GREEN . "ImmortalAppleBD made by Bobydev enabled 👍!");
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
